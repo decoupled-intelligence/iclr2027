@@ -1,7 +1,7 @@
 ---
 layout: default2
 permalink: /
-title: Decoupled Intelligence @ NeurIPS 2026
+title: 'Coupled or Decoupled? Drawing the Boundaries of Foundation Models'
 nav_order: 1
 ---
 
@@ -14,75 +14,78 @@ nav_order: 1
 
 ### Workshop Description
 
-Foundation models (FMs) have been driving recent progress in AI, but at the same time, they reinforce a monolithic view of intelligence: more capabilities through larger models trained on vast datasets. Systems based on monolithic foundation models often fail under distribution shifts across domains, tasks, or local constraints. Inappropriate hidden priors and static internalized knowledge are carried into new inferences, leading to poor generalization, unreliable conclusions, and safety issues, as illustrated by reported failures involving [hallucinated personal claims](https://www.bbc.com/news/articles/c0kgydkr516o) and AI assistant errors in news summaries. On the other hand, alternative paradigms of intelligence built on decoupling and externalization are emerging: decoupling intention from intelligence (e.g., Scientist AI), knowledge from reasoning, identity from usage (e.g., Open Anonymity's "VPN for AI inference"), short-term updatable memory from long-term parametric memory (e.g., LMLM, RAG, tool use, and memory modules), and local data from global representations (e.g., federated learning).
+**Proposed workshop at ICLR 2027.** The program, submission dates, and participation are subject to workshop acceptance.
 
-In 2026, AI systems are also facing mounting pressures from data ownership issues such as copyright disputes, licensing restrictions, privacy regulation, and data scarcity, while at the same time needing to handle value misalignment issues, with some groups demanding models that provide answers closer to their values. These constraints make decoupled AI architectures that respect user sovereignty and values not only desirable, but necessary. In industry, the emerging trend that foundation models do not constitute a full product of their own, and that they should instead be developed for compatibility with user-controlled memory modules, application-specific harnesses (e.g., [AI harness engineering](https://openreview.net/forum?id=3hXEPbG0dh) and [code as agent harness](https://arxiv.org/abs/2605.18747)), and other agentic orchestration layers, seems to offer a promising path toward more flexible and modular systems. This approach allows users to retain control over their data and workflows while reducing dependence on any single provider or its designated values, thereby mitigating the risks of lock-in to particular providers.
+Foundation models (FMs) bundle many functions, including reasoning, knowledge, memory, preferences, identity, and control, within a single model or tightly coupled system. This workshop asks: **which functions should remain coupled, and which should be separated by explicit, controllable interfaces?** We use *decoupled intelligence* as an umbrella term for systems that deliberately separate functions commonly entangled in monolithic FMs. We remain agnostic about whether stronger or weaker decoupling is preferable: suitable systems may span a spectrum of coupling levels based on practical needs.
 
-Beyond an AI system challenge, decoupling raises a fundamental question: what is the irreducible core of intelligence, and what can be separated from it? As memory, knowledge, intention, identity, and computation become externalized, understanding whether decoupling can enable a more adaptive and reliable form of intelligence than monolithic foundation models becomes a central scientific and philosophical inquiry. The rise of multimodal foundation models further sharpens these questions. While decoupling has shown promise in language-centric systems, it remains unclear how reasoning, memory, and knowledge should be separated when intelligence operates over jointly encoded visual, auditory, textual, and sensor modalities. Understanding which components should remain shared and which should be modularized is becoming a central scientific challenge.
+Examples include separating contextual from parametric memory through [memory modules](https://arxiv.org/abs/1410.5401), retrieval, and tools; externalizing knowledge through [limited memory language models](https://openreview.net/forum?id=cvztBvlglK); separating local data from centralized computation through [decoupled embeddings](https://arxiv.org/abs/2410.05021); separating identity from usage through [private or pseudonymous inference](https://openanonymity.ai/); and separating intention from intelligence through [Scientist AI](https://arxiv.org/abs/2502.15657). Additional interfaces can also introduce failure modes, coordination costs, security risks, or losses in end-to-end performance.
 
-Taken together, both emerging scientific directions and growing societal demands point towards decoupled AI systems as increasingly important alternatives to monolithic foundation models. This workshop therefore calls for a different trajectory of decoupled intelligence. By convening researchers across machine learning, systems, and governance, this workshop aims to develop shared taxonomies, evaluation frameworks, and architectural principles for decoupled AI systems that are inherently adaptable under changing data and diverse deployment constraints, including different cultural values, and therefore by design support better efficiency, safety, and user sovereignty.
+These choices raise fundamental questions: what is the irreducible core of a generally capable model? Which capabilities can be externalized without sacrificing performance or generalization? When does modularity improve adaptability, controllability, privacy, or auditability, and when does it create brittle interfaces or new attack surfaces? Multimodal systems sharpen these questions because reasoning, memory, knowledge, and representations interact across visual, auditory, textual, and sensor modalities.
 
-<br>
+Data ownership, copyright and licensing, privacy, personalization, and differing user values also affect where data, memory, preferences, and control should reside. Foundation models increasingly operate within systems involving retrieval, memory, tools, and application-specific harnesses; see [Li et al., Agent Harness Engineering: A Survey](https://openreview.net/pdf?id=eONq7FdiHa). Architectural boundaries therefore matter for data governance, provider dependence, and user sovereignty as well as model performance.
+
+Our intended outputs are shared taxonomies, empirical evaluation criteria, and architectural principles that clarify trade-offs among adaptability, reliability, efficiency, safety, and user sovereignty. We plan to summarize the discussions in a post-workshop report.
+
+### Problems We Aim to Advance
+
+1. **Characterizing coupling:** develop a shared vocabulary and candidate metrics for entanglement among reasoning, knowledge, memory, and control.
+2. **When separation helps or hurts:** compare coupled and decoupled designs under controlled conditions.
+3. **Reliability and control:** evaluate both the benefits of explicit interfaces and the failure modes and attack surfaces they introduce.
+4. **Limits of decomposition:** identify interactions that cannot be separated without loss.
 
 ### Importance, Novelty, and Audience
 
-As a field, we have seen major progress in AI in recent years through the monolithic foundation model paradigm. However, as the initial excitement around "FM = AGI" gradually fades, we are facing a possible redefinition of future intelligence itself. Decoupling is about creating and maintaining meaningful boundaries: separating partial intelligence from static model parameters, and deciding what systems should retain internally versus what they should externalize. This challenge spans multiple areas:
+The placement of architectural boundaries is itself our object of study. Evidence that a capability should remain tightly coupled is as relevant as evidence that it should be externalized.
 
-- In **efficiency research**, systems must determine which components to reuse and which to replace.
-
-- In **safety-critical applications**, systems must preserve abstract reasoning capabilities without leaking domain-specific assumptions across contexts.
-
-- In **privacy-sensitive applications**, systems must determine what should remain in centralized parameters versus local or user-controlled storage. Decoupling creates a boundary between shared model capabilities and user-private data.
-
-- In **multimodal foundation models**, systems must separate shared abstract representations and operations in latent space from modality-specific knowledge.
-
-- In **continual learning**, systems must distinguish between useful memory retention and harmful rigidity.
-
-However, there is still a lack of common language to facilitate scientific discussion in decoupling. Nor do we have standardized benchmarks and evaluations of whether decoupling is successful, or whether different levels of decoupling are needed for different scenarios. All of these are unaddressed community needs. In this workshop, we expect audiences across the above areas to come together, sharpen the common thread of decoupling, develop a common taxonomy for deepening this line of research, and pave the way for future AI systems that go beyond foundation models.
+We bring together researchers in foundation models, representation learning, modular and compositional learning, continual learning, retrieval and memory, multimodal learning, AI safety, privacy, personalization, agent systems, human-centered AI, and ML systems. These communities often study related boundary-setting problems with different terminology and evaluation criteria. Comparing their findings can help establish a common language and reveal trade-offs across fields.
 
 ### [Call for Papers]({{ '/call/' | relative_url }}) and [Competition]({{ '/competition/' | relative_url }})
 
-Our workshop will comprise a standard CFP process and a competition to engage different audiences. In our tentative schedule, we have six invited talks, two contributed-talk sessions, two poster sessions, one panel discussion, and dedicated sessions for the competition overview and winner talks. The panel discussion and extended poster sessions are designed to support substantive discussion.
+The proposed program combines full and tiny papers with a competition, invited and contributed talks, a panel, and two extended poster sessions. All accepted papers will receive a poster presentation. The panel asks **What Should or Should Not Be Decoupled?** and will bring together contrasting perspectives. Audience questions will be collected in advance and live.
 
+Accepted papers, posters, and slides will be linked from this website. Subject to speaker consent and ICLR recording arrangements, talks and the panel will also be shared. Competition artifacts and a post-workshop report will remain available after the event.
+
+### Invited Speakers
+
+Participation statuses below follow the current proposal. Travel arrangements may change; talk times are TBD.
+
+<div class="team-container speaker-container">
+    <div class="sponsor">
+        <img src="{{ '/assets/img/speakers/yoshua_bengio.jpg' | relative_url }}" alt="Yoshua Bengio">
+        <p><a href="https://yoshuabengio.org/">Yoshua Bengio</a><br>Mila / Universit&eacute; de Montr&eacute;al<br>Confirmed<br>Talk at TBD</p>
+        <p>Can Intentions Be Separated from Capabilities? Lessons from Scientist AI</p>
+    </div>
+    <div class="sponsor">
+        <img src="{{ '/assets/img/speakers/jennifer_sun.jpg' | relative_url }}" alt="Jennifer Sun">
+        <p><a href="https://jenjsun.com/">Jennifer Sun</a><br>Cornell University<br>Confirmed<br>Talk at TBD</p>
+        <p>What Knowledge Belongs in Parameters? LMLM and Knowledge Externalization</p>
+    </div>
+    <div class="sponsor">
+        <img src="{{ '/assets/img/speakers/karl_friston.jpg' | relative_url }}" alt="Karl Friston">
+        <p><a href="https://profiles.ucl.ac.uk/2747-karl-friston">Karl Friston</a><br>University College London<br>Confirmed<br>Talk at TBD</p>
+        <p>What Must Stay Coupled for Adaptation? An Active-Inference View</p>
+    </div>
+    <div class="sponsor">
+        <!-- Replace the placeholder with /assets/img/speakers/shengran_hu.jpg when ready. -->
+        <img src="{{ '/assets/img/speakers/placeholder.svg' | relative_url }}" alt="Shengran Hu">
+        <p>Shengran Hu<br>Recursive Superintelligence<br>Confirmed<br>Talk title and time TBD</p>
+    </div>
+    <div class="sponsor">
+        <img src="{{ '/assets/img/speakers/philip_isola.jpg' | relative_url }}" alt="Philip Isola">
+        <p><a href="https://web.mit.edu/phillipi/">Philip Isola</a><br>MIT<br>Tentative<br>Talk at TBD</p>
+        <p>Which Representations Should Be Shared Across Modalities, and Which Should Stay Specialized?</p>
+    </div>
+    <div class="sponsor">
+        <!-- Replace the placeholder with /assets/img/speakers/ruihan_wu.jpg when ready. -->
+        <img src="{{ '/assets/img/speakers/placeholder.svg' | relative_url }}" alt="Ruihan Wu">
+        <p>Ruihan Wu<br>OpenAI<br>Invited<br>Talk at TBD</p>
+        <p>What User Data Should Stay Out of Model Weights? Privacy-Preserving LLMs</p>
+    </div>
+</div>
+
+Patrick Lewis (Cohere) is a proposed additional speaker; participation is not yet confirmed. Proposed focus: Can Instructions Do the Decoupling? Retrieval Grounding as Behavior-Level Separation.
 
 <br>
-
-### :sparkles: Keynote Speakers
-
-<html>
-    <div class="team-container speaker-container">
-        <div class="sponsor">
-            <img src="{{ '/assets/img/speakers/yoshua_bengio.jpg' | relative_url }}" alt="Yoshua Bengio">
-            <p><a href="https://yoshuabengio.org/">Yoshua Bengio</a>
-            <br>Mila <br> Universit&eacute; de Montr&eacute;al<br>Talk at TBD</p>
-        </div>
-        <div class="sponsor">
-            <img src="{{ '/assets/img/speakers/karl_friston.jpg' | relative_url }}" alt="Karl Friston">
-            <p><a href="https://profiles.ucl.ac.uk/2747-karl-friston">Karl Friston</a>
-            <br>University College London<br>Talk at TBD</p>
-        </div>
-        <div class="sponsor">
-            <img src="{{ '/assets/img/speakers/jakob_hohwy.jpg' | relative_url }}" alt="Jakob Hohwy">
-            <p><a href="https://research.monash.edu/en/persons/jakob-hohwy/">Jakob Hohwy</a>
-            <br>Monash University<br>Talk at TBD</p>
-        </div>
-        <div class="sponsor">
-            <img src="{{ '/assets/img/speakers/percy_liang.jpg' | relative_url }}" alt="Percy Liang">
-            <p><a href="https://cs.stanford.edu/~pliang/">Percy Liang</a>
-            <br>Stanford University<br>Talk at TBD</p>
-        </div>
-        <div class="sponsor">
-            <img src="{{ '/assets/img/speakers/jennifer_sun.jpg' | relative_url }}" alt="Jennifer Sun">
-            <p><a href="https://jenjsun.com/">Jennifer Sun</a>
-            <br>Cornell University<br>Talk at TBD</p>
-        </div>
-        <div class="sponsor">
-            <img src="{{ '/assets/img/speakers/philip_isola.jpg' | relative_url }}" alt="Philip Isola">
-            <p><a href="https://web.mit.edu/phillipi/">Philip Isola</a>
-            <br>MIT<br>Talk at TBD</p>
-        </div>
-    </div>
-</html>
 
 
 <!-- ## Organization Chairs -->
@@ -165,6 +168,30 @@ Our workshop will comprise a standard CFP process and a competition to engage di
 -->
 
 <br>
+
+### Program Committee
+
+Confirmed members listed in the current proposal:
+
+- **University of Oxford:** Anushka Nair, Yonatan Gideoni, Daniella Ye, Lin Li, Hao Fei, Shengqiong Wu, Luckeciano Carvalho Melo, Yug Oswal, Hao Zha, Guanzhe Hong, Dilan Yang
+- **University of Rochester:** Xiangxiang Xu
+- **Ant Group:** Zhenduo Zhang
+- **City University of Hong Kong:** Fengji Zhang
+- **Tsinghua University:** Yingrong Qin
+- **University College London:** Jiayi Wang, Keyue Jiang, Chunan Liu
+- **University of Cambridge:** Alex Iacob
+- **Meta:** Shalini Malti
+- **The University of Manchester:** Haripriya Harikumar
+- **University of Edinburgh:** Christina Xiaotang Du, Ivan Vegner
+- **Technical University Berlin:** Wolf Siegfried Rieder
+- **Independent Researcher:** Luca Franceschi
+- **Canopy Labs:** Eric Passawis
+- **Cohere / University of Pennsylvania:** Keenan Samway
+- **Metamorphic:** Shell Hu
+- **Mila:** Jacob Lavoie, Bruce Wen
+- **LawZero:** Ali Harakeh, Vincent Mai, Damiano Fornasiere, Andy Huang, Aissatou Diallo, Dmitri Carpov
+- **University of Auckland:** Qiming Bao, Tim Pistotti, Yuchen Su
+- **Shanghai AI Lab:** Yang Chen
 
 ### Sponsors
 

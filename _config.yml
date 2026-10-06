@@ -2,13 +2,14 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Decoupled Intelligence @ NeurIPS 2026 # the website title (if blank, full name will be used instead)
+title: Coupled or Decoupled? @ ICLR 2027
+workshop_title: 'Coupled or Decoupled? Drawing the Boundaries of Foundation Models'
 first_name: 
 middle_name:
 last_name:
 email: 
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Decoupled Intelligence @ NeurIPS 2026.
+  Proposed ICLR 2027 workshop on where foundation model capabilities should remain coupled or be separated, and how to evaluate those boundaries.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. 
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
@@ -17,7 +18,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🪄  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://decoupled-intelligence.github.io # the base hostname & protocol for your site
-baseurl: /neurips2026  # the subpath of your site, e.g. /blog/
+baseurl: /iclr2027
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -55,7 +56,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: Decoupled-Intelligence # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: MLLanguageGames # your Twitter handle
+twitter_username: # Add the workshop account when available
 linkedin_username: # your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID

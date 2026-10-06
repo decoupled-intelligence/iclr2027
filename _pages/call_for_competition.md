@@ -2,12 +2,43 @@
 layout: default2
 permalink: /competition/
 title: Call for Competition
-description:
 nav: true
 nav_order: 3
 ---
 
+### Competition
 
-The workshop will include a competition focused on whether language models can make reliable use of contextual information when solving reasoning tasks with potentially helpful or misleading cues. We will adapt a recent [code-execution dataset](https://huggingface.co/datasets/plstcharles-saifh/pyine-v1-traces) by adding new contextual labels and attributes, such that participants must build systems that can infer when to trust, ignore, or discount hints while still predicting the correct execution outcome of a Python program. Participants will be asked to submit their final solutions as reproducible artifacts, ideally including a hosted Hugging Face model checkpoint, together with open-source code for training and inference and a short two-page summary describing their approach. Final evaluations will be conducted by the organizers on a private withheld test set, using both prediction performance and efficiency/cost-related metrics. Competition rankings will also take into account the clarity, reproducibility, and scientific value of each submitted approach, so that strong entries are rewarded not only for raw performance, but also for providing useful insights into how models can decouple task-relevant reasoning from misleading contextual cues.
+**Proposed competition, subject to workshop acceptance.**
 
-<br><br><br>
+Can a model's task reasoning remain robust when contextual signals strongly correlated during training become unreliable at test time? This competition is a focused empirical case study of separating task-relevant computation from unreliable contextual information under distribution shift.
+
+We adapt the [code-execution dataset](https://huggingface.co/datasets/plstcharles-saifh/pyine-v1-traces) with contextual labels and attributes. Systems must infer when to trust, ignore, or discount contextual cues while predicting the correct execution outcome of a Python program.
+
+The benchmark will include helpful, misleading, and shifted contexts. We welcome prompting, retrieval or external verification, modular architectures, fine-tuning, and other training strategies. The benchmark is one instance of the broader coupling problem, rather than a complete test of decoupled intelligence.
+
+### Submission and Evaluation
+
+Submit a reproducible system, ideally including:
+
+- A hosted Hugging Face model checkpoint
+- Open-source training and inference code
+- A two-page summary of the approach
+
+Final evaluation uses a private withheld test set and reports predictive performance together with efficiency or cost metrics. Rankings also consider reproducibility and scientific insight. Detailed metrics, leaderboard, starter kit, and submission instructions will be announced at launch.
+
+### Eligibility
+
+Organizers and anyone with access to the private test set are ineligible for awards. Organizer baselines will appear only as reference entries.
+
+Members of the organizers' institutions may participate, but their entries will be assessed only by organizers from other institutions.
+
+### Tentative Timeline
+
+All deadlines are Anywhere on Earth (AoE), subject to workshop acceptance.
+
+- December 15, 2026: competition launch, training and validation data, starter kit, and public leaderboard
+- March 1, 2027: final submission deadline for the reproducible system and two-page summary
+- March 22, 2027: private-test evaluation complete; finalists and winners notified
+- April 29 or 30, 2027: workshop and winner presentations (exact day TBD)
+
+Winners unable to travel in exceptional circumstances may provide a pre-recorded talk. Competition data, leaderboard, and winning systems' code and checkpoints will remain publicly available after the workshop.

@@ -3,17 +3,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <!-- Open Graph meta tags for LinkedIn -->
-    <meta property="og:title" content="Decoupled Intelligence @ NeurIPS 2026">
-    <meta property="og:description" content="Join us for Decoupled Intelligence @ NeurIPS 2026, featuring keynote speeches, panel discussions, and poster sessions.">
-    <meta property="og:image" content="{{ 'assets/img/main.jpeg' | relative_url | prepend: site.url }}">
+    <meta property="og:title" content="{{ site.workshop_title | escape }} @ ICLR 2027">
+    <meta property="og:description" content="{{ site.description | strip | escape }}">
+    <meta property="og:image" content="{{ '/assets/img/header-decoupled-intelligence.png' | absolute_url }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:type" content="website">
   
     <!-- Additional meta tags for Twitter Cards (optional) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Decoupled Intelligence @ NeurIPS 2026">
-    <meta name="twitter:description" content="Join us for Decoupled Intelligence @ NeurIPS 2026, featuring keynote speeches, panel discussions, and poster sessions.">
-    <meta name="twitter:image" content="{{ 'assets/img/main.jpeg' | relative_url | prepend: site.url }}">
+    <meta name="twitter:title" content="{{ site.workshop_title | escape }} @ ICLR 2027">
+    <meta name="twitter:description" content="{{ site.description | strip | escape }}">
+    <meta name="twitter:image" content="{{ '/assets/img/header-decoupled-intelligence.png' | absolute_url }}">
   
     <!-- Metadata, OpenGraph and Schema.org -->
     {% include metadata.html %}
