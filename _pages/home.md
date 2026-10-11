@@ -66,9 +66,8 @@ Participation statuses below follow the current proposal. Travel arrangements ma
         <p>What Must Stay Coupled for Adaptation? An Active-Inference View</p>
     </div>
     <div class="sponsor">
-        <!-- Replace the placeholder with /assets/img/speakers/shengran_hu.jpg when ready. -->
-        <img src="{{ '/assets/img/speakers/placeholder.svg' | relative_url }}" alt="Shengran Hu">
-        <p>Shengran Hu<br>Recursive Superintelligence<br>Confirmed<br>Talk title and time TBD</p>
+        <img src="{{ '/assets/img/speakers/shengran_hu.jpg' | relative_url }}" alt="Shengran Hu">
+        <p><a href="https://www.shengranhu.com/">Shengran Hu</a><br>Recursive Superintelligence<br>Confirmed<br>Talk title and time TBD</p>
     </div>
     <div class="sponsor">
         <img src="{{ '/assets/img/speakers/philip_isola.jpg' | relative_url }}" alt="Philip Isola">
@@ -76,9 +75,8 @@ Participation statuses below follow the current proposal. Travel arrangements ma
         <p>Which Representations Should Be Shared Across Modalities, and Which Should Stay Specialized?</p>
     </div>
     <div class="sponsor">
-        <!-- Replace the placeholder with /assets/img/speakers/ruihan_wu.jpg when ready. -->
-        <img src="{{ '/assets/img/speakers/placeholder.svg' | relative_url }}" alt="Ruihan Wu">
-        <p>Ruihan Wu<br>OpenAI<br>Invited<br>Talk at TBD</p>
+        <img src="{{ '/assets/img/speakers/ruihan_wu.jpg' | relative_url }}" alt="Ruihan Wu">
+        <p><a href="https://sites.google.com/site/ruihanwu14/home">Ruihan Wu</a><br>OpenAI<br>Invited<br>Talk at TBD</p>
         <p>What User Data Should Stay Out of Model Weights? Privacy-Preserving LLMs</p>
     </div>
 </div>
