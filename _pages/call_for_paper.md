@@ -12,8 +12,9 @@ nav_order: 2
 
 - Submission opens: December 15, 2026
 - Submission deadline: February 1, 2027
+- Reviews due: February 20, 2027
 - Author notification: February 24, 2027
-- Accepted papers public on OpenReview: February 24, 2027
+- Accepted papers public on OpenReview and imported into iclr.cc: February 24, 2027 (ICLR mandatory deadline: February 26)
 - Workshop: April 29 or 30, 2027 (exact day TBD)
 - OpenReview submission link and camera-ready deadline: TBA
 

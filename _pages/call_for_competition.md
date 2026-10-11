@@ -36,9 +36,9 @@ Members of the organizers' institutions may participate, but their entries will 
 
 All deadlines are Anywhere on Earth (AoE), subject to workshop acceptance.
 
-- December 15, 2026: competition launch, training and validation data, starter kit, and public leaderboard
-- March 1, 2027: final submission deadline for the reproducible system and two-page summary
-- March 22, 2027: private-test evaluation complete; finalists and winners notified
+- January 15, 2027: competition launch, training and validation data, starter kit, and public leaderboard
+- March 15, 2027: final submission deadline for the reproducible system and two-page summary
+- April 5, 2027: private-test evaluation complete; finalists and winners notified
 - April 29 or 30, 2027: workshop and winner presentations (exact day TBD)
 
 Winners unable to travel in exceptional circumstances may provide a pre-recorded talk. Competition data, leaderboard, and winning systems' code and checkpoints will remain publicly available after the workshop.

@@ -131,11 +131,6 @@ Patrick Lewis (Cohere) is a proposed additional speaker; participation is not ye
             <br>LawZero</p>
         </div>
         <div class="team-member">
-            <img src="{{ '/assets/img/organizers/kevin_kasa.jpg' | relative_url }}" alt="Kevin Kasa">
-            <p><a href="https://kevinkasa.github.io/">Kevin Kasa</a>
-            <br>LawZero</p>
-        </div>
-        <div class="team-member">
             <img src="{{ '/assets/img/organizers/sebastien_bratieres.jpg' | relative_url }}" alt="Sebastien Bratieres">
             <p><a href="https://it.linkedin.com/in/sebastien-bratieres">Sébastien Bratières</a>
             <br>Translated <br> DVPS</p>
